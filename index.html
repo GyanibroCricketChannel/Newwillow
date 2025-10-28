@@ -1,4 +1,3 @@
-Gyani Bro Support:
 <!DOCTYPE html>  
 <html>  
 <head>  
@@ -95,4 +94,33 @@ Gyani Bro Support:
             timeout: 10000,  
             maxAttempts: 5,  
             baseDelay: 300,  
-           …
+            backoffFactor: 1.2  
+          },  
+          segmentRequestTimeout: 8000,  
+          segmentPrefetchLimit: 2,  
+          useNativeHlsOnSafari: true  
+        },  
+        manifest: {  
+          retryParameters: {  
+            timeout: 8000,  
+            maxAttempts: 3  
+          }  
+        }  
+      });  
+  
+      player.addEventListener('error', (event) => {  
+        console.error('Shaka Player Error:', event.detail);  
+      });  
+  
+      try {  
+        await player.load(streamUrl);  
+        console.log("Stream loaded successfully");  
+      } catch (error) {  
+        console.error('Load error:', error);  
+      }  
+    }); 
+   !0 == confirm("Join our Telegram Group to get All Updates @WatchAddLive") && window.open("https://telegram.me/@WatchAddaLive", "_blank");
+   
+  </script>  
+</body>  
+</html>
